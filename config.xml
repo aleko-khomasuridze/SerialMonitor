@@ -1,4 +1,7 @@
-<config>
-    <port>COM13</port>
-    <baudRate>115200</baudRate>
-</config>
+<?xml version="1.0" encoding="UTF-8"?>
+<SerialMonitorConfig>
+    <Communication>
+        <Port>COM13</Port>
+        <BaudRate>115200</BaudRate>
+    </Communication>
+</SerialMonitorConfig>
