@@ -1,6 +1,5 @@
 import serial
 import serial.tools.list_ports
-
 from src.Utils.XMLUtils import XMLUtils
 
 class Stream:
@@ -51,24 +50,65 @@ class Stream:
         # self.Connect()
         # self.Reconnect()
 
-
     def GetPort(self):
+        """
+        Returns the current serial port.
+
+        Returns
+        -------
+        str
+            The current serial port.
+        """
         return self.__port
     
     def GetBaudRate(self):
+        """
+        Returns the current baud rate.
+
+        Returns
+        -------
+        int
+            The current baud rate.
+        """
         return self.__baudRate
     
-
     def SetEel(self, eelRef):
+        """
+        Sets the eel reference for the Stream object.
+
+        Parameters
+        ----------
+        eelRef : eel
+            The eel reference for communication between Python and JavaScript.
+        """
         self.__eelRef = eelRef
     
     def SetPort(self, port):
+        """
+        Sets the serial port.
+
+        Parameters
+        ----------
+        port : str
+            The serial port to connect to.
+        """
         self.__port = port
 
     def SetBaudRate(self, baudRate):
+        """
+        Sets the baud rate for the serial communication.
+
+        Parameters
+        ----------
+        baudRate : int
+            The baud rate for the serial communication.
+        """
         self.__baudRate = baudRate
 
     def LogSerialData(self):
+        """
+        Logs data received from the serial connection by sending it to the eel JavaScript interface.
+        """
         while self.__SerialConnection.is_open:
             data = self.Get()
             if data:
@@ -131,6 +171,14 @@ class Stream:
 
     @staticmethod
     def ListComPorts():
+        """
+        Lists all available COM ports.
+
+        Returns
+        -------
+        list
+            A list of dictionaries containing port and description for each COM port.
+        """
         ports = serial.tools.list_ports.comports()
         return [{"port": port.device, "description": port.description} for port in ports]
 

@@ -8,15 +8,21 @@
 </head>
 <body>
     
+    <!-- Container for command input -->
     <div id="input-container">
         <input type="text" id="command-input" placeholder="Enter your command">
         <button onclick="StreamUtils.SendCommand()">Send</button>
     </div>
+
+    <!-- Log window to display sent and received data -->
     <div id="log-window"></div>
+
+    <!-- Actions container for selecting COM port and baud rate -->
     <div id="actions">
         <div id="select-properties">
             <label for="port">Select COM Port:</label>
             <select name="port" id="port"></select>
+
             <label for="baudRate">Select Baud Rate:</label>
             <select name="baudRate" id="baudRate" value="115200">
                 <option value="1200">1200</option>
@@ -39,7 +45,10 @@
         </div>
         <button id="connect-button" onclick="StreamUtils.Connect()">Connect</button>
     </div>
+
+    <!-- Including Eel for Python-JavaScript communication -->
     <script type="text/javascript" src="/eel.js"></script>
+    <!-- Including the JavaScript file for stream utilities -->
     <script src="src/StreamUtils.js"></script>
 </body>
 </html>
