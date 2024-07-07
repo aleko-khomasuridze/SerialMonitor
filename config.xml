@@ -1,0 +1,4 @@
+<config>
+    <port>COM13</port>
+    <baudRate>115200</baudRate>
+</config>

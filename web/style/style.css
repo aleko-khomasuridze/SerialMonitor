@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #121212;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+#actions {
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid #1e88e5;
+}
+
+button {
+    background-color: #1e88e5;
+    border: none;
+    min-width: 6rem;
+    min-height: 2.3rem;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #1e88e5;
+    border: 3px solid #1e88e5;
+}
+
+#log-window {
+    width: 98%;
+    height: 70%;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    overflow: auto;
+    color: white;
+    padding: 1rem;
+    border: 2px solid #1e88e5;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+    color: #b0bec5;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+select {
+    min-width: 10vw;
+    min-height: 4vh;
+    border-radius: 10px;
+    border: 1px solid #424242;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+#input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 98%;
+    margin-bottom: 1vh;
+}
+
+#input-container input {
+    width: 94%;
+    min-height: 2.3rem;
+    border: 1px solid #424242;
+    border-radius: 10px;
+    padding: 0.5rem;
+    background-color: #2e2e2e;
+    color: white;
+}
+
+#input-container button {
+    margin-left: 1rem;
+}
+
+#select-properties {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Custom scrollbar styles */
+#log-window::-webkit-scrollbar {
+    width: 12px;
+}
+
+#log-window::-webkit-scrollbar-track {
+    background: #2e2e2e;
+    border-radius: 10px;
+}
+
+#log-window::-webkit-scrollbar-thumb {
+    background-color: #1e88e5;
+    border-radius: 10px;
+    border: 3px solid #2e2e2e;
+}
