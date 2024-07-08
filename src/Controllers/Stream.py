@@ -112,7 +112,7 @@ class Stream:
         while self.__SerialConnection.is_open:
             data = self.Get()
             if data:
-                self.__eelRef.UpdateLogWindow(data)()
+                self.__eelRef.UpdateLogWindow(data)
 
     def Connect(self):
         """
