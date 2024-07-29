@@ -16,6 +16,7 @@ eel.expose(stream.SetPort)       # Expose the method to set the COM port
 eel.expose(stream.SetBaudRate)   # Expose the method to set the baud rate
 eel.expose(stream.Connect)       # Expose the method to connect to the serial port
 eel.expose(stream.LogSerialData) # Expose the method to log serial data
+eel.expose(stream.Post)          # Expose the method to log serial data
 
 if __name__ == '__main__':
     # Start the eel application with the specified HTML file and window size

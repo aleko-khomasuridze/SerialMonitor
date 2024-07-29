@@ -1,3 +1,7 @@
 src\Utils\__pycache__
 src\Controllers\__pycache__
 Serial Monitor.bat
+src/Utils/__pycache__/XMLUtils.cpython-310.pyc
+src/Controllers/__pycache__/Stream.cpython-310.pyc
+/src/Controllers/__pycache__
+/src/Utils/__pycache__
