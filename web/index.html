@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -14,11 +14,15 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <div class="d-flex">
-                    <button class="btn btn-outline-primary" type="button">
+                    <button 
+                        class="btn btn-outline-primary" 
+                        type="button"
+                        onclick="themeChanger()"
+                    >
                         <i class="ri-sun-line"></i>
                     </button>
                 </div>
@@ -39,7 +43,7 @@
 
         <!-- Log window to display sent and received data -->
         <section>
-            <div id="log-window" class="border rounded p-3 bg-light" style="min-height: 200px;">
+            <div id="log-window" class="border rounded p-3 " style="min-height: 200px;">
                 <p class="text-muted">Logs will appear here...</p>
             </div>
         </section>
@@ -83,6 +87,7 @@
     <script type="text/javascript" src="/eel.js"></script>
     <!-- Including the JavaScript file for stream utilities -->
     <script src="src/StreamUtils.js"></script>
+    <script src="src/ThemeChanger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
