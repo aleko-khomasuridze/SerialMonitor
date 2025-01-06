@@ -1,7 +1,6 @@
 
 cd C:\\
-pip install eel
-pip install pyserial
+pip install -r requirements.txt
 pip show eel
 pip show pyserial
 @echo
